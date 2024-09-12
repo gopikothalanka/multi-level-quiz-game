@@ -5,16 +5,16 @@ const Button2 = ({ label, onClick, disabled }) => {
   return (
     <StyledWrapper>
       <button onClick={onClick} disabled={disabled}>
-        <a href="#" className={disabled ? "disabled" : ""}>
+        <p className={disabled ? "disabled" : ""}>
           <span>{label}</span>
-        </a>
+        </p>
       </button>
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
-  a {
+  p {
     position: relative;
     display: inline-block;
     padding: 15px 30px;
@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
     font-size: 20px;
   }
 
-  a::before {
+  p::before {
     content: "";
     position: absolute;
     top: 6px;
@@ -38,11 +38,11 @@ const StyledWrapper = styled.div`
     transform: scaleY(1);
   }
 
-  a:hover::before {
+  p:hover::before {
     transform: scaleY(0);
   }
 
-  a::after {
+  p::after {
     content: "";
     position: absolute;
     left: 6px;
@@ -55,11 +55,11 @@ const StyledWrapper = styled.div`
     transition-delay: 0.5s;
   }
 
-  a:hover::after {
+  p:hover::after {
     transform: scaleX(0);
   }
 
-  a span {
+  p span {
     position: relative;
     z-index: 3;
   }

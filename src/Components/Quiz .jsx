@@ -54,7 +54,7 @@ const Quiz = ({ questions }) => {
         setCurrentLevel("hard");
         setCurrentQuestionIndex(0);
       } else {
-        if (score == 0) {
+        if (score === 0) {
           updateSrore();
         }
         setScreen("end");

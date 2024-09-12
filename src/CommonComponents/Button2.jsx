@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button2 = ({ label, href, onClick, disabled }) => {
+const Button2 = ({ label, onClick, disabled }) => {
   return (
     <StyledWrapper>
       <button onClick={onClick} disabled={disabled}>
-        <a href={disabled ? "#" : href} className={disabled ? "disabled" : ""}>
+        <a href="#" className={disabled ? "disabled" : ""}>
           <span>{label}</span>
         </a>
       </button>

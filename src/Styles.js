@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Root_Container = styled.div`
+export const RootContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #e8e8e8;
@@ -10,7 +10,7 @@ export const Root_Container = styled.div`
   font-size: 18px;
 `;
 
-export const Main_Ctr = styled.div`
+export const MainCtr = styled.div`
   flex: 1;
   border-radius: 5px;
   border: 1px solid #1e1e1e;
@@ -29,35 +29,35 @@ export const StyledHeading = styled.h1`
     font-size: 100px;
   }
 `;
-export const Question_ctr = styled.div`
+export const QuestionCtr = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   gap: 20px;
 `;
-export const Question_ctr2 = styled.div`
+export const QuestionCtr2 = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 20px;
 `;
 
-export const Quiz_ctr = styled.div`
+export const QuizCtr = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 450px;
   justify-content: space-between;
   max-width: 350px;
 `;
-export const SubmitBtn_ctr = styled.div`
+export const SubmitBtnCtr = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: end;
 `;
 
-export const Quiz_ctr2 = styled.div`
+export const QuizCtr2 = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ export const Quiz_ctr2 = styled.div`
   flex-direction: column;
   gap: 30px;
 `;
-export const Quiz_ctr3 = styled.div`
+export const QuizCtr3 = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;

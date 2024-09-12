@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import QuizQuestion from "./QuizQuestion";
 import { Button2, Button3, TextField } from "../CommonComponents";
-import { SubmitBtn_ctr, Quiz_ctr, Quiz_ctr2, ScoreB } from "../Styles";
+import { SubmitBtnCtr, QuizCtr, QuizCtr2, ScoreB } from "../Styles";
 import EndScreen from "./EndScreen";
 const Quiz = ({ questions }) => {
   const [screen, setScreen] = useState("start");
@@ -77,7 +77,7 @@ const Quiz = ({ questions }) => {
   return (
     <>
       {screen === "quiz" && (
-        <Quiz_ctr>
+        <QuizCtr>
           <div>
             <ScoreB>
               <span>
@@ -101,14 +101,14 @@ const Quiz = ({ questions }) => {
               />
             )}
           </div>
-          <SubmitBtn_ctr>
+          <SubmitBtnCtr>
             <Button3 label="Submit" onClick={handleSubmit} />
             <div>Current Score: {score}</div>
-          </SubmitBtn_ctr>
-        </Quiz_ctr>
+          </SubmitBtnCtr>
+        </QuizCtr>
       )}
       {screen === "start" && (
-        <Quiz_ctr2>
+        <QuizCtr2>
           <TextField
             placeholder="Enter your Name here"
             name="text-input"
@@ -121,7 +121,7 @@ const Quiz = ({ questions }) => {
             onClick={() => user?.length >= 3 && setScreen("quiz")}
             disabled={!user || user?.length < 3}
           />
-        </Quiz_ctr2>
+        </QuizCtr2>
       )}
       {screen === "end" && <EndScreen reStart={reStart} score={score} />}
     </>

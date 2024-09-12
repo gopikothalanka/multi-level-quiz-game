@@ -1,16 +1,16 @@
 import "./App.css";
-import { Root_Container, Main_Ctr } from "./Styles";
+import { RootContainer, MainCtr } from "./Styles";
 import { questionsData } from "./Questions";
 import Quiz from "./Components/Quiz ";
 import { StyledHeading } from "./Styles";
 function App() {
   return (
-    <Root_Container>
-      <Main_Ctr>
+    <RootContainer>
+      <MainCtr>
         <StyledHeading>Quiz</StyledHeading>
         <Quiz questions={questionsData} />
-      </Main_Ctr>
-    </Root_Container>
+      </MainCtr>
+    </RootContainer>
   );
 }
 

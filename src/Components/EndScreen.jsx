@@ -1,5 +1,5 @@
 import React from "react";
-import { CHeading, Quiz_ctr3, StyledUl } from "../Styles";
+import { CHeading, QuizCtr3, StyledUl } from "../Styles";
 import { Button1 } from "../CommonComponents";
 
 const EndScreen = ({ reStart, score }) => {
@@ -7,7 +7,7 @@ const EndScreen = ({ reStart, score }) => {
   const sortedScores = storedScores.sort((a, b) => b.score - a.score);
 
   return (
-    <Quiz_ctr3>
+    <QuizCtr3>
       <CHeading>Completed...</CHeading>
       <p>
         <strong> Your Total Score:</strong> {score}
@@ -24,7 +24,7 @@ const EndScreen = ({ reStart, score }) => {
       </StyledUl>
 
       <Button1 onClick={reStart} label={"Restart..."} />
-    </Quiz_ctr3>
+    </QuizCtr3>
   );
 };
 

@@ -73,7 +73,7 @@ const Quiz = ({ questions }) => {
 
   useEffect(() => {
     updateSrore();
-  }, [score, updateSrore]);
+  }, [score]);
 
   return (
     <>

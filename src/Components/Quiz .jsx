@@ -33,6 +33,7 @@ const Quiz = ({ questions }) => {
       const updatedScores = storedScores.filter((x) => x.user !== u);
       updatedScores.push({ user: u, score });
       localStorage.setItem("scores", JSON.stringify(updatedScores));
+      setStoredScores(JSON.parse(localStorage.getItem("scores")) || []);
     }
   };
   const handleSubmit = () => {
@@ -124,7 +125,13 @@ const Quiz = ({ questions }) => {
           />
         </QuizCtr2>
       )}
-      {screen === "end" && <EndScreen reStart={reStart} score={score} />}
+      {screen === "end" && (
+        <EndScreen
+          reStart={reStart}
+          score={score}
+          storedScores={storedScores}
+        />
+      )}
     </>
   );
 };

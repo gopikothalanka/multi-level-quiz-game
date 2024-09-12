@@ -2,8 +2,7 @@ import React from "react";
 import { CHeading, QuizCtr3, StyledUl } from "../Styles";
 import { Button1 } from "../CommonComponents";
 
-const EndScreen = ({ reStart, score }) => {
-  const storedScores = JSON.parse(localStorage.getItem("scores")) || [];
+const EndScreen = ({ reStart, score, storedScores }) => {
   const sortedScores = storedScores.sort((a, b) => b.score - a.score);
 
   return (

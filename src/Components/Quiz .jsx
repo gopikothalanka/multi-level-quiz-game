@@ -36,6 +36,7 @@ const Quiz = ({ questions }) => {
     }
   };
   const handleSubmit = () => {
+    updateSrore();
     const isCorrect =
       answer?.toString().toLowerCase() ===
       currentQuestion.correctAnswer.toLowerCase();
@@ -72,7 +73,7 @@ const Quiz = ({ questions }) => {
 
   useEffect(() => {
     updateSrore();
-  }, [score]);
+  }, [score, updateSrore]);
 
   return (
     <>
